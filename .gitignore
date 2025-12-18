@@ -3,3 +3,5 @@ logs/
 __pycache__/
 *.keras
 *.jpg
+mlruns/
+trained_cnn_model.keras/

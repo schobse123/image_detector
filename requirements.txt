@@ -3,3 +3,5 @@ numpy
 tensorflow
 matplotlib
 tensorflow.keras
+mlflow
+scikit-learn
