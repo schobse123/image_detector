@@ -2,6 +2,7 @@ pandas
 numpy
 tensorflow
 matplotlib
-tensorflow.keras
 mlflow
 scikit-learn
+customtkinter
+Pillow
