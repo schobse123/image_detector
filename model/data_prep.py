@@ -1,8 +1,10 @@
 import tensorflow as tf
-from tensorflow.keras.preprocessing import image_dataset_from_directory
 
-image_size = (64, 64)
-batch_size = 32
+
+image_dataset_from_directory = tf.keras.utils.image_dataset_from_directory
+
+image_size = (224, 224)
+batch_size = 8
 image_path = './data/'
 
 

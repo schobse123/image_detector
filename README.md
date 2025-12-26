@@ -94,3 +94,20 @@ For image data, it is necessary to use **2D convolutions**. Here, $\mathbf{F}$ a
 $$ (\mathbf{F*G})_{m,n} = \sum_{i=-\infty}^{\infty} \sum_{j=-\infty}^{\infty} F_{i,j}G_{m-i,n-j}\stackrel{\text{commutativity}}{=} \sum_{i=-\infty}^{\infty} \sum_{j=-\infty}^{\infty} F_{i,j}G_{m-i,n-j} $$
 Use padding to preserve the desired output dimensions.
 
+### Structure
+The ReLU Layer ensures, that the CNN is able to model nonlinear problems:
+$$ Z = ReLU(X*W) $$
+Z is the Output. The ReLU activation function is applied to the convolution to create threshold values. These values are then passed to the next layer. Without the ReLU each Output would be a linear combination of the input $X$ and the filter $W$.
+
+**Pooling** reduces the size of feature maps by summarizing small areas into single values. Pooling is done at the level of each activation map, whereas convolution simultaneously uses all feature maps in combination with a filter to produce a single feature value. Therefore pooling does not change the number of feature maps!
+
+### Backpropagation through Convolutions:
+
+Backpropagation is used in the convolution, ReLU and pooling layers.
+### Parameters:
+- ***epoch***: a complete pass through the entire training dataset 
+- ***batch_size***: Number of pictures used for one training/validation run 
+> A small batch_size safes RAM, but slower in each epoch
+- ***image_size***: should be $L=B$
+- $\mathbf{n_{filters}}$: should be in each layer should be a power to 2 - more efficient processing
+- ***filter_size***: small = better (mostly);  use 3 or 5; small filter lead to deeper networks for the same parameter footprint

@@ -1,6 +1,7 @@
 pandas
-numpy
-tensorflow
+numpy<2
+tensorflow==2.16.2
+keras==3.12.0
 matplotlib
 mlflow
 scikit-learn

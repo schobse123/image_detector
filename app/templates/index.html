@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cat vs Dog Classifier</title>
+    <style>
+        body { font-family: sans-serif; text-align: center; padding: 50px; }
+        .container { max-width: 600px; margin: auto; padding: 20px; border: 1px solid #ddd; border-radius: 10px; }
+        img { max-width: 100%; height: auto; margin-top: 20px; border-radius: 5px; }
+        .result { font-size: 24px; font-weight: bold; color: #333; margin-top: 20px; }
+        .btn { background-color: #007bff; color: white; padding: 10px 20px; border: none; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🐶 Cat or Dog? 🐱</h1>
+        <form method="post" enctype="multipart/form-data">
+            <input type="file" name="file" accept="image/*" required>
+            <br><br>
+            <button type="submit" class="btn">Analyze Image</button>
+        </form>
+
+        {% if result %}
+        <div class="result">
+            <p>{{ result }}</p>
+            <img src="{{ image_url }}" alt="Uploaded Image">
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>

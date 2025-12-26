@@ -36,7 +36,7 @@ def run_training():
         history = model.fit(
             train_ds,
             validation_data=val_ds,
-            epochs=1, # Start with 20, adjust based on validation results
+            epochs=50, # Start with 50, adjust based on validation results
             callbacks=[tb_callback],
         )
 
